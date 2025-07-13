@@ -9,7 +9,7 @@ Chromium with Spotify, Geforce Now, Amazon Luna, and Xcloud shortcuts via alpine
 
 In SSH run:
 
-`curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh | bash`
+`curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | bash`
 
 PKGX - CLI tools
 
