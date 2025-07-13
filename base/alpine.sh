@@ -9,7 +9,7 @@ install_alpine_chroot() {
         echo "✅ Alpine chroot detected. Skipping installation."
     else
         echo "🚀 Installing Alpine chroot..."
-        curl -L https://github.com/profork/ROCKNIX-alpine-chroot/raw/main/start-alpine.sh | bash
+        curl -L https://github.com/profork/ROCKNIX-alpinechroot/raw/main/start-alpine.sh | bash
     fi
 }
 
