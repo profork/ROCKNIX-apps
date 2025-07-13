@@ -1,6 +1,6 @@
 #!/bin/bash
 #check that alpine is installed; install if not present
-curl -Ls https://github.com/trashbus99/ROCKNIX.apps/raw/main/base/alpine.sh | bash
+curl -Ls https://github.com/profork/ROCKNIX.apps/raw/main/base/alpine.sh | bash
 
 #!/bin/bash
 
