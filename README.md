@@ -2,17 +2,17 @@ Librewolf with Youtube TV UI (navigate with gamepad) launcher for Rocknix.
 
 In SSH  run
 
-`curl -L bit.ly/rocknixyoutube | bash`
+`curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh | bash`
 
 
 Chromium with Spotify, Geforce Now, Amazon Luna, and Xcloud shortcuts via alpine chroot.
 
 In SSH run:
 
-`curl -L bit.ly/rocknixchromium | bash`
+`curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh | bash`
 
 PKGX - CLI tools
 
-`curl -L bit.ly/rocknix-pkgx | bash`
+`curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash`
 
 list of pkgs - https://pkgx.dev/pkgs/ 
