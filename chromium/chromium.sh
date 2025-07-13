@@ -7,7 +7,7 @@ GPTK_FILE="$LAUNCH_SCRIPT_DIR/chromium.gptk"
 # Ensure Alpine chroot exists; if not, install it.
 if [ ! -d "$CHROOT_DIR" ] || [ ! -f "$CHROOT_DIR/bin/busybox" ]; then
     echo "🟡 Alpine chroot not found. Installing..."
-    curl -Ls https://github.com/profork/ROCKNIX.apps/raw/main/base/alpine.sh | bash
+    curl -Ls https://github.com/profork/ROCKNIX-apps/raw/main/base/alpine.sh | bash
 fi
 
 # Install Chromium inside the chroot
