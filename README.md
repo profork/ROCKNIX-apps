@@ -8,7 +8,7 @@ Some launchers use Alpine chroot environments and are gamepad-friendly where app
 ## 🦊 LibreWolf + YouTube Leanback (TV UI)
 
 Launches LibreWolf with a custom profile tailored for YouTube Leanback (TV UI).  
-Includes GPTK mappings for full gamepad navigation.
+Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
 
 **Install via SSH:**
 ```
