@@ -9,6 +9,7 @@ Some launchers use Alpine chroot environments and are gamepad-friendly where app
 
 Launches Firefox with a custom profile tailored for YouTube Leanback (TV UI).  
 Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
+
 *(Compatibility varies -- SM8550/ODIN 2 Worked, RK3566 didn't work)
 
 **Install via SSH:**
