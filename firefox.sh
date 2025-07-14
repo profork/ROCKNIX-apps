@@ -69,8 +69,9 @@ EOF
 chmod +x "$FIREFOX_LAUNCHER"
 
 # Step 4: Ask for YouTube TV (Leanback) launcher
-read -p "❓ Do you want a YouTube TV (Leanback) launcher with Roku user-agent spoof? [y/N]: " yt_choice
-yt_choice=${yt_choice,,}  # lowercase
+echo -n "❓ Do you want a YouTube TV (Leanback) launcher with Roku user-agent spoof? [y/N]: "
+read yt_choice < /dev/tty
+
 
 if [[ "$yt_choice" == "y" ]]; then
     echo "🖥️  Adding YouTube TV launcher..."
