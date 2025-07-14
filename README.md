@@ -10,7 +10,7 @@ Some launchers use Alpine chroot environments and are gamepad-friendly where app
 Launches Firefox with a custom profile tailored for YouTube Leanback (TV UI).  
 Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
 
-*(Compatibility varies -- SM8550/ODIN 2 Worked, RK3566 didn't work)
+*(Compatibility varies -- SM8550/ODIN 2 and RK3588 Worked , RK3566 didn't work -- 4gb RAM seems to be minimum)
 
 **Install via SSH:**
 ```
@@ -42,7 +42,7 @@ Chromium web browser with web app shortcuts to:
 
 (You will need a mouse/kb to log in)
 
-*(Compatibility varies -- SM8550/ODIN 2 Worked, RK3566 didn't work)
+*(Compatibility varies -- 8550/ODIN 2 and RK3588 Worked , RK3566 didn't work -- 4gb RAM seems to be minimum
 
 **Install via SSH:**
 ```
