@@ -42,7 +42,7 @@ Chromium web browser with web app shortcuts to:
 
 (You will need a mouse/kb to log in)
 
-*(Compatibility varies -- 8550/ODIN 2 and RK3588 Worked , RK3566 didn't work -- 4gb RAM seems to be minimum
+*(Compatibility varies -- 8550/ODIN 2 worked.  RK3566 and RK3588  didn't work -- 6-8 gb RAM seems to be minimum
 
 **Install via SSH:**
 ```
