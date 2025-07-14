@@ -24,6 +24,8 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh  | bash
 Launches LibreWolf with a custom profile tailored for YouTube Leanback (TV UI).  
 Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
 
+*(Recommended for Lower end devices)
+
 **Install via SSH:**
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh | bash
