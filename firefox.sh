@@ -1,5 +1,5 @@
 #!/bin/bash
-# Rocknix Firefox 139.0.4 Installer with optional YouTube Leanback launcher
+# Rocknix Firefox 139.0.4 Installer with automatic YouTube Leanback launcher
 
 APP_DIR="/storage/Applications/firefox"
 PORTS_DIR="/storage/roms/ports"
@@ -68,19 +68,11 @@ EOF
 
 chmod +x "$FIREFOX_LAUNCHER"
 
-# Step 4: Ask for YouTube TV (Leanback) launcher
-echo -n "❓ Do you want a YouTube TV (Leanback) launcher with Roku user-agent spoof? [y/N]: "
-read yt_choice < /dev/tty
+# Step 4: Create YouTube TV launcher
+echo "🖥️  Creating YouTube Leanback launcher..."
+echo 'user_pref("general.useragent.override", "Roku/DVP-9.10 (519.10E04111A)");' >> "$UA_PREF"
 
-
-if [[ "$yt_choice" == "y" ]]; then
-    echo "🖥️  Adding YouTube TV launcher..."
-
-    # Inject user-agent override
-    echo 'user_pref("general.useragent.override", "Roku/DVP-9.10 (519.10E04111A)");' >> "$UA_PREF"
-
-    # Create launcher
-    cat > "$YOUTUBE_LAUNCHER" <<EOF
+cat > "$YOUTUBE_LAUNCHER" <<EOF
 #!/bin/bash
 trap 'pkill gptokeyb' EXIT
 
@@ -92,10 +84,10 @@ sleep 1
 "$APP_DIR/firefox" -kiosk -profile "$PROFILE_DIR" "https://www.youtube.com/tv"
 EOF
 
-    chmod +x "$YOUTUBE_LAUNCHER"
-    echo "✅ YouTube Leanback launcher created: $YOUTUBE_LAUNCHER"
-fi
+chmod +x "$YOUTUBE_LAUNCHER"
 
 echo "✅ Firefox 139.0.4 installed!"
 echo "▶️ Launch Firefox from: $FIREFOX_LAUNCHER"
-echo "Rockchip SOC users should switch to panfrost drivers"
+echo "📺 Launch YouTube TV UI from: $YOUTUBE_LAUNCHER"
+echo "🎮 Exit with Start+Select"
+echo "Rockchip SOC users may need to switch to Panfrost video Driver"
