@@ -15,7 +15,7 @@ KODI in alpine chroot
 
 IN SSH run: 
 
-```curl -L https://github.com/profork/ROCKNIX-apps/blob/main/kodi/kodi.sh | bash```
+```curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi.sh | bash```
 
 PKGX - CLI tools
 
