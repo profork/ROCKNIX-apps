@@ -54,6 +54,8 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | 
 Kodi media center running in an Alpine chroot.  
 Includes ALSA support and optional gamepad hotkeys.
 
+*(Performance varies; needs higher end devices for smoother video playback)
+
 **Install via SSH:**
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi.sh | bash
