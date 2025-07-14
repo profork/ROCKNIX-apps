@@ -24,7 +24,7 @@ sleep 5
 # ---------------------------
 # Step 1: Download and Set Up LibreWolf
 # ---------------------------
-LIBREWOLF_URL="https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/135.0-1/LibreWolf.aarch64.AppImage"
+LIBREWOLF_URL="https://gitlab.com/api/v4/projects/24386000/packages/generic/librewolf/139.0.4-1/LibreWolf.aarch64.AppImage"
 
 echo "Downloading LibreWolf AppImage..."
 mkdir -p /storage/Applications
