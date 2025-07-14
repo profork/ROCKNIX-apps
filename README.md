@@ -42,6 +42,8 @@ Chromium web browser with web app shortcuts to:
 
 (You will need a mouse/kb to log in)
 
+*(Compatibility varies -- SM8550/ODIN 2 Worked, RK3566 didn't work)
+
 **Install via SSH:**
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | bash
