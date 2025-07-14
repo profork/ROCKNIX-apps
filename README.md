@@ -1,4 +1,4 @@
-# 🐧 ROCKNIX third-party App and tools
+# 🐧 ROCKNIX third-party Apps and tools
 
 Quick-install scripts for popular desktop apps and services on Rocknix.  
 Some launchers use Alpine chroot environments and are gamepad-friendly where applicable.
@@ -68,7 +68,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash
 
 ---
 
-## 🚀 Soar (Pkg-Forge App Launcher)
+## 🚀 Soar (Pkg-Forge pkg manager)
 
 More static linked  CLI tools and apps maintained by PKG-Forge https://github.com/pkgforge/soar
 **Install via SSH:**
