@@ -4,7 +4,7 @@
 APP_DIR="/storage/Applications/firefox"
 PORTS_DIR="/storage/roms/ports"
 PROFILE_DIR="/storage/.firefox"
-FIREFOX_URL="https://download-installer.cdn.mozilla.net/pub/firefox/releases/139.0.4/linux-aarch64/eo/firefox-139.0.4.tar.xz"
+FIREFOX_URL="https://download-installer.cdn.mozilla.net/pub/firefox/releases/139.0.4/linux-aarch64/en-US/firefox-139.0.4.tar.xz"
 ARCHIVE_NAME="firefox-139.0.4.tar.xz"
 GPTK_FILE="$PORTS_DIR/firefox.gptk"
 FIREFOX_LAUNCHER="$PORTS_DIR/Firefox.sh"
