@@ -23,6 +23,7 @@ Chromium web browser with web app shortcuts to:
 - GeForce Now  
 - Amazon Luna  
 - Xbox Cloud Gaming (Xcloud)
+
 (You will need a mouse/kb to log in)
 
 **Install via SSH:**
