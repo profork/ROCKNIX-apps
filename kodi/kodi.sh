@@ -91,6 +91,7 @@ exec chroot "$CHROOT_DIR" env DISPLAY=:0 kodi
 EOF
 
 chmod +x "$LAUNCHER"
-echo "✅ Debug install complete!"
+echo "✅  Install complete!"
 echo "   - GPTK mapping: $GPTK_FILE"
 echo "   - Launcher script: $LAUNCHER"
+echo "   -Rockchip users may need panfrost drivers enabled"
