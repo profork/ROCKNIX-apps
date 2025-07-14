@@ -1,6 +1,6 @@
 #!/bin/bash
 # Check that Alpine is installed; install if not present
-curl -Ls https://github.com/trashbus99/ROCKNIX.apps/raw/main/base/alpine.sh | bash
+curl -Ls https://github.com/profork/ROCKNIX-apps/raw/main/base/alpine.sh | bash
 
 CHROOT_DIR="/storage/my-alpine-chroot"
 LAUNCH_SCRIPT_DIR="/storage/roms/ports"
