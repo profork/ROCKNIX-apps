@@ -1,34 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 CHROOT_DIR="/storage/my-alpine-chroot"
+BOOTSTRAP_URL="https://github.com/profork/ROCKNIX-alpinechroot/raw/main/start-alpine.sh"
 
-# Function to check if Alpine chroot is already installed
-install_alpine_chroot() {
-    echo "🔍 Checking if Alpine chroot is already installed..."
-    if [ -d "$CHROOT_DIR" ] && [ -f "$CHROOT_DIR/bin/busybox" ]; then
-        echo "✅ Alpine chroot detected. Skipping installation."
-    else
-        echo "🚀 Installing Alpine chroot..."
-        curl -L https://github.com/profork/ROCKNIX-alpinechroot/raw/main/start-alpine.sh | bash
-    fi
-}
+# 1) Bootstrap if missing
+if [[ -d "$CHROOT_DIR" && -x "$CHROOT_DIR/bin/busybox" ]]; then
+  echo "✅ Alpine chroot detected—skipping install."
+else
+  echo "🚀 Installing Alpine chroot from $BOOTSTRAP_URL"
+  curl -fsSL "$BOOTSTRAP_URL" | bash
+fi
 
-# Function to update Alpine repositories
-update_repositories() {
-    echo "🌍 Updating Alpine package sources..."
-    chroot "$CHROOT_DIR" /bin/bash -l <<EOF
-    apk update
-    apk add nano
-    echo "🔧 Editing repositories file..."
-    sed -i 's|^http.*|# Disabled Default Repo|' /etc/apk/repositories
-    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories
-    echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
-    apk update && apk upgrade
+# 2) Update repos inside chroot to v3.22
+echo "🌍 Updating Alpine package sources to v3.22…"
+chroot "$CHROOT_DIR" /bin/sh -l <<'EOF'
+apk update
+apk add --no-cache nano
+# Remove any existing v3.* entries, then add v3.22 main & community
+grep -v '^https://dl-cdn.alpinelinux.org/alpine/v3\.' /etc/apk/repositories > /tmp/repos && mv /tmp/repos /etc/apk/repositories
+cat <<REPOS >> /etc/apk/repositories
+https://dl-cdn.alpinelinux.org/alpine/v3.22/main
+https://dl-cdn.alpinelinux.org/alpine/v3.22/community
+REPOS
+apk update && apk upgrade --available
 EOF
-}
 
-# Ensure Alpine chroot exists before updating repositories
-install_alpine_chroot
-update_repositories
-
-echo "🎉 Alpine chroot setup complete!"
+echo "🎉 Alpine chroot setup complete (now on v3.22)!"
