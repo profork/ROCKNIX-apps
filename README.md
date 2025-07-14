@@ -1,11 +1,11 @@
-# 🐧 ROCKNIX App Launchers
+# 🐧 ROCKNIX third-parry App and tools
 
 Quick-install scripts for popular desktop apps and services on Rocknix.  
 Most launchers use Alpine chroot environments and are gamepad-friendly where applicable.
 
 ---
 
-## 🦊 LibreWolf + YouTube TV UI
+## 🦊 LibreWolf + YouTube Leanback (TV UI)
 
 Launches LibreWolf with a custom profile tailored for YouTube Leanback (TV UI).  
 Includes GPTK mappings for full gamepad navigation.
@@ -19,7 +19,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh 
 
 ## 🌐 Chromium (Alpine Chroot)
 
-Chromium launcher with web app shortcuts to:
+Chromium web browser with web app shortcuts to:
 - GeForce Now  
 - Amazon Luna  
 - Xbox Cloud Gaming (Xcloud)
