@@ -68,26 +68,9 @@ EOF
 
 chmod +x "$FIREFOX_LAUNCHER"
 
-# Step 4: Create YouTube TV launcher
-echo "🖥️  Creating YouTube Leanback launcher..."
-echo 'user_pref("general.useragent.override", "Roku/DVP-9.10 (519.10E04111A)");' >> "$UA_PREF"
 
-cat > "$YOUTUBE_LAUNCHER" <<EOF
-#!/bin/bash
-trap 'pkill gptokeyb' EXIT
-
-export DISPLAY=:0.0
-export HOME="$PROFILE_DIR"
-
-gptokeyb -p "firefox" -c "$GPTK_FILE" -k firefox &
-sleep 1
-"$APP_DIR/firefox" -kiosk -profile "$PROFILE_DIR" "https://www.youtube.com/tv"
-EOF
-
-chmod +x "$YOUTUBE_LAUNCHER"
 
 echo "✅ Firefox 139.0.4 installed!"
 echo "▶️ Launch Firefox from: $FIREFOX_LAUNCHER"
-echo "📺 Launch YouTube TV UI from: $YOUTUBE_LAUNCHER"
 echo "🎮 Exit with Start+Select"
 echo "Rockchip SOC users may need to switch to Panfrost video Driver"
