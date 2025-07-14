@@ -11,6 +11,12 @@ In SSH run:
 
 ```curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | bash```
 
+KODI in alpine chroot
+
+IN SSH run: 
+
+```curl -L https://github.com/profork/ROCKNIX-apps/blob/main/kodi/kodi.sh | bash```
+
 PKGX - CLI tools
 
 ```curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash```
