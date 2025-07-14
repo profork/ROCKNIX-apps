@@ -5,10 +5,7 @@ Some launchers use Alpine chroot environments and are gamepad-friendly where app
 
 ---
 
-## 🦊 Firefox + YouTube Leanback (TV UI) 
-
-Launches Firefox with a custom profile tailored for YouTube Leanback (TV UI).  
-Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
+## 🦊 Firefox  
 
 *(Compatibility varies -- SM8550/ODIN 2 and RK3588 Worked , RK3566 didn't work -- 4gb RAM seems to be minimum)
 
