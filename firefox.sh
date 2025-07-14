@@ -97,3 +97,4 @@ fi
 
 echo "✅ Firefox 139.0.4 installed!"
 echo "▶️ Launch Firefox from: $FIREFOX_LAUNCHER"
+echo "Rockchip SOC users should switch to panfrost drivers"
