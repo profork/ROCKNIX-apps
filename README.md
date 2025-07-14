@@ -1,7 +1,7 @@
 # 🐧 ROCKNIX third-party App and tools
 
 Quick-install scripts for popular desktop apps and services on Rocknix.  
-Most launchers use Alpine chroot environments and are gamepad-friendly where applicable.
+Some launchers use Alpine chroot environments and are gamepad-friendly where applicable.
 
 ---
 
