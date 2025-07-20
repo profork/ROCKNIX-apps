@@ -71,6 +71,8 @@ Lightweight CLI package manager from [pkgx.dev](https://pkgx.dev/pkgs/).
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash
 ```
 
+
+
 ---
 
 ## 🚀 Soar (Pkg-Forge pkg manager)
@@ -80,3 +82,7 @@ More static linked  CLI tools and apps maintained by PKG-Forge https://github.co
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/soar.sh | bash
 ```
+
+Useful lists:
+For Apps/Packages `soar list 'pkgcache' | more`
+For Bin (CLI tools) `soar list 'bincache' | more`
