@@ -57,5 +57,5 @@ echo "✅ pkgx installed to: $PKGX_BIN"
 echo "✅ Symlinked as: $BIN_WRAPPER/pkgx"
 echo "✅ PATH updated in: $PROFILE and loaded now"
 echo
-echo "🚀 Try something fun: run 👉 pkgx fastfetch"
+echo "🚀 Try something fun: run 👉 pkgx fastfetch after starting new shell session"
 
