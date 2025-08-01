@@ -61,7 +61,15 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi.sh | bash
 ```
 
 ---
+---
+## ES CARBON THEME (BATOCERA)
+<img width="1279" height="801" alt="image" src="https://github.com/user-attachments/assets/bd3a315a-051a-4ae7-bb22-a256b4932473" />
 
+
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/es-carbon.sh | bash
+```
+---
 ## 🧰 PKGX (CLI Tool Manager)
 
 Lightweight CLI package manager from [pkgx.dev](https://pkgx.dev/pkgs/).
