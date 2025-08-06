@@ -1,7 +1,7 @@
 #!/bin/bash
 # RunImage-based Kodi installer for Rocknix with gamepad mapping and ALSA audio fix
 
-#set -euo pipefail
+# set -euo pipefail
 
 ### Paths ###
 RI_WORKDIR="/storage/ri"
@@ -93,9 +93,14 @@ EOF
 chmod +x "$LAUNCHER"
 
 ### Done ###
-echo "✅ Kodi RunImage installed!"
+
 echo " - RunImage: $RI_DIR/kodi-runimage"
 echo " - Gamepad map: $GPTK_FILE"
 echo " - Launcher: $LAUNCHER"
 echo " - Rockchip devices may need panfrost enabled"
 echo " - Some devices may need Audio device changed in settings"
+echo ""
+echo ""
+echo " - Cleaning Up / Removing Build folder"
+rm -rf ~/ri
+echo "✅ Kodi RunImage installed!"
