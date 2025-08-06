@@ -1,6 +1,10 @@
 #!/bin/bash
 # RunImage-based Kodi installer for Rocknix with gamepad mapping and ALSA audio fix
 
+clear
+echo "Thanks to VHSGunzo for Runimage..."
+sleep 5
+clear
 # set -euo pipefail
 
 ### Paths ###
