@@ -73,7 +73,7 @@ gptokeyb -p "chromium" -c "$GPTK_FILE" -k chromium &
 sleep 1
 
 # Launch Chromium in the chroot with gamepad support enabled.
-exec chroot "\$CHROOT_DIR" env \\
+    chroot "\$CHROOT_DIR" env \\
     WAYLAND_DISPLAY=wayland-0 \\
     PULSE_SERVER=unix:\$PULSE_SOCKET \\
     $launch_command
