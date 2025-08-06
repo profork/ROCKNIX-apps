@@ -48,18 +48,21 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | 
 
 ---
 
-## 📺 Kodi (Alpine Chroot)
+## 📺 Kodi (Alpine Chroot and Runimage Arch Container)
 
-Kodi media center running in an Alpine chroot.  
-Includes ALSA support and optional gamepad hotkeys.
+*Kodi media center running in an Alpine chroot or Arch Container.
+*Arch container version has better performance, especially on lower end devices
+*Includes ALSA support and optional gamepad hotkeys.
 
-*(Performance varies; needs higher end devices for smoother video playback)
 
-**Install via SSH:**
+**Alpine Chroot Version Install via SSH:**
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi.sh | bash
 ```
-
+**Arch Container Version Install via SSH:**
+```
+curl -L https://github.com/profork/ROCKNIX-apps/blob/main/kodi/arch-kodi.sh | bash 
+```
 ---
 ---
 ## ES CARBON THEME (BATOCERA)
