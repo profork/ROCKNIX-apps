@@ -1,7 +1,7 @@
 #!/bin/bash
 # RunImage-based Kodi installer for Rocknix with gamepad mapping and ALSA audio fix
 
-set -euo pipefail
+#set -euo pipefail
 
 ### Paths ###
 RI_WORKDIR="/storage/ri"
