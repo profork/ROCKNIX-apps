@@ -51,7 +51,9 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | 
 ## 📺 Kodi (Alpine Chroot and Runimage Arch Container)
 
 *Kodi media center running in an Alpine chroot or Arch Container.
+
 *Arch container version has better performance, especially on lower end devices
+
 *Includes ALSA support and optional gamepad hotkeys.
 
 
