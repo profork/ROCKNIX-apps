@@ -61,7 +61,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi.sh | bash
 ```
 **Arch Container Version Install via SSH:**
 ```
-curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/arch-kodi.sh | bash 
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/ak.sh | bash 
 ```
 ---
 ---
