@@ -2,6 +2,17 @@
 
 Quick-install scripts for popular desktop apps and services on Rocknix.  
 Some launchers use Alpine chroot environments and are gamepad-friendly where applicable.
+---
+## Desktop Mode
+
+Runnimage Arch Container running XFCE Desktop
+
+<img width="1916" height="1048" alt="image" src="https://github.com/user-attachments/assets/3274127d-842f-4025-8d38-2cf230c6e4af" />
+
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-desktop.sh | bash
+```
+*First Launch can take a while as it downloads Desktop packages from Arch Repositories in background.
 
 ---
 
