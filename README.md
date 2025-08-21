@@ -5,7 +5,7 @@ Some launchers use Alpine chroot environments and are gamepad-friendly where app
 ---
 ## Desktop Mode
 
-Runnimage Arch Container running XFCE Desktop
+Runimage Arch Container running XFCE Desktop
 
 <img width="1916" height="1048" alt="image" src="https://github.com/user-attachments/assets/3274127d-842f-4025-8d38-2cf230c6e4af" />
 
