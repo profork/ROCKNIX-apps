@@ -3,7 +3,10 @@
 # Rocknix: installs RunImage (correct arch), sets up a Ports launcher,
 # tries OverlayFS (FUSE) first, and auto-falls back to "unpacked" persistent mode.
 
-
+clear
+echo "THANKS TO VHSGUNZO FOR RUNIMAGE!"
+sleep 6
+clear
 
 set -euo pipefail
 
