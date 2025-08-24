@@ -81,6 +81,13 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/kodi/kodi-installer.sh 
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/es-carbon.sh | bash
 ```
 ---
+## ES MUSIC PACK (Music from Batocera, Knulli, and Reg-Linux)
+
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/music.sh | bash
+```
+
+---
 ## 🧰 PKGX (CLI Tool Manager)
 
 Lightweight CLI package manager from [pkgx.dev](https://pkgx.dev/pkgs/).
