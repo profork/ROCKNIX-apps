@@ -86,7 +86,12 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/es-carbon.sh | bash
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/music.sh | bash
 ```
+---
+## Batocera & Reg-Linux free Roms pack -- Roms that come with those distros
 
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/freebatroms.sh | bash
+```
 ---
 ## 🧰 PKGX (CLI Tool Manager)
 
