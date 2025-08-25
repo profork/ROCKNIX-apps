@@ -2,8 +2,8 @@
 
 # Variables
 THEME_DIR="/storage/.config/emulationstation/themes"
-ZIP_URL="https://github.com/fabricecaruso/es-theme-carbon/archive/refs/heads/master.zip"
-ZIP_NAME="master.zip"
+ZIP_URL="https://github.com/profork/profork/releases/download/r1/es-theme-carbon.zip"
+ZIP_NAME="es-theme-carbon.zip"
 TMP_DIR="/tmp"
 
 # Go to temp directory
