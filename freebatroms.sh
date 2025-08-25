@@ -25,7 +25,6 @@ https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationst
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/c64/Showdown.d64|c64|Showdown.d64
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/gba/Anguna.gba|gba|Anguna.gba
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/gbc/Petris.gbc|gbc|Petris.gbc
-https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/mastersystem/Mai%20Nurse%20(v1.00).sms|mastersystem|Mai Nurse (v1.00).sms
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/pcengine/Dinoforce.pce|pcengine|Dinoforce.pce
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/snes/Dottie%20Flowers%20(v1.1).sfc|snes|Dottie Flowers (v1.1).sfc
 https://raw.githubusercontent.com/REG-Linux/REG-Linux/master/package/emulationstation/es-system/roms/snes/Super%20Boss%20Gaiden%20(v1.2).sfc|snes|Super Boss Gaiden (v1.2).sfc
