@@ -15,8 +15,6 @@ https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/b
 https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/megadrive/Old-Towers.bin|megadrive|Old-Towers.bin
 https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/gba/SpaceTwins.gba|gba|SpaceTwins.gba
 https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/pcengine/Reflectron%20(aetherbyte).pce|pcengine|Reflectron (aetherbyte).pce
-https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/snes/DonkeyKongClassic%20(Shiru).smc|snes|DonkeyKongClassic (Shiru).smc
-https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/prboom/doom1_shareware.wad|doom|doom1_shareware.wad
 https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/prboom/prboom.wad|doom|prboom.wad
 https://raw.githubusercontent.com/batocera-linux/batocera.linux/master/package/batocera/emulationstation/batocera-es-system/roms/c64/fix_it_felix_64.d64|c64|fix_it_felix_64.d64
 
