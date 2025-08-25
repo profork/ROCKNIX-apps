@@ -9,9 +9,9 @@ TMP_DIR="/tmp"
 # Go to temp directory
 cd "$TMP_DIR" || exit 1
 
-# Download with curl: pretty progress, remote name
-echo "Downloading Carbon theme..."
-curl --progress-bar --remote-name --location "$ZIP_URL"
+# Download with wget (shows progress, saves as $ZIP_NAME)
+echo "Downloading Carbon theme...Appox 150Mb"
+wget -q --show-progress -O "$ZIP_NAME" "$ZIP_URL"
 
 # Extract
 echo "Extracting theme..."
