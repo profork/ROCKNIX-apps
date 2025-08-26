@@ -29,7 +29,6 @@ download() {
     return 0
   fi
   mkdir -p "$(dirname "$out")"
-  log "↓ Downloading: $out"
   wget -q --show-progress -O "$out".partial "$url"
   mv -f "$out".partial "$out"
   log "✔ Saved: $out"
@@ -75,15 +74,13 @@ if [[ "$EMUDECK" == "1" ]]; then
   EMUDECK_ZIP="$TMPDIR/emudeck-homebrew.zip"
   EMUDECK_DIR="$TMPDIR/emudeck-homebrew"
 
-  log "=== Fetching EmuDeck homebrew repo ==="
   download "$EMUDECK_URL" "$EMUDECK_ZIP"
-
   rm -rf "$EMUDECK_DIR"
   mkdir -p "$EMUDECK_DIR"
   unzip -q "$EMUDECK_ZIP" -d "$EMUDECK_DIR"
-
   ROOT_EXPANDED="$(find "$EMUDECK_DIR" -maxdepth 1 -type d -name 'emudeck-homebrew-*' | head -n1)"
 
+  # Map repo folder → ES system folder
   map_system() {
     local s="${1,,}"
     case "$s" in
@@ -102,26 +99,43 @@ if [[ "$EMUDECK" == "1" ]]; then
     esac
   }
 
-  # Ignore list
-  IGNORE_LIST=(
-    "Alter_Ego.zip"
-    "REM.zip"
-    "Petrophobia.zip"
-    "Anguna.gba"
-    "WingWarriors.zip"
-    "BrokenCircle.zip"
-    "Abbaye_des_Morts.zip"
+  # Ignore by pattern (case/space/underscore/dash insensitive)
+  IGNORE_PATTERNS=(
+    "alter_ego"         # Alter_Ego.zip variants
+    "rem"               # REM.zip (short; adjust if too broad)
+    "petrophobia"       # Petrophobia.zip
+    "anguna"            # any Anguna zip if present (duplicate)
+    "wingwarriors"      # WingWarriors.zip or Wing Warriors.zip
+    "brokencircle"      # BrokenCircle.zip / Broken Circle.zip
+    "abbaye"            # Abbaye_des_Morts.zip variants
   )
 
-  is_ignored() {
-    local base="$1"
-    for ignore in "${IGNORE_LIST[@]}"; do
-      [[ "$base" == "$ignore" ]] && return 0
+  normalize() {
+    # lower-case and strip all non-alphanumeric
+    local s="${1,,}"
+    s="${s// /}"
+    s="${s//_/}"
+    s="${s//-/}"
+    s="${s//./}"
+    s="${s//(/}"
+    s="${s//)/}"
+    s="${s//\'/}"
+    s="${s//,/}"
+    echo "$s"
+  }
+
+  should_ignore() {
+    local base_norm; base_norm="$(normalize "$1")"
+    for pat in "${IGNORE_PATTERNS[@]}"; do
+      local pat_norm; pat_norm="$(normalize "$pat")"
+      if [[ "$base_norm" == *"$pat_norm"* ]]; then
+        return 0
+      fi
     done
     return 1
   }
 
-  log "=== Installing EmuDeck homebrew (zipped ROMs) ==="
+  # Copy zipped ROMs quietly
   while IFS= read -r -d '' sysdir; do
     sysname="$(basename "$sysdir")"
     [[ "$sysname" == "downloaded_media" ]] && continue
@@ -130,21 +144,17 @@ if [[ "$EMUDECK" == "1" ]]; then
 
     while IFS= read -r -d '' zipfile; do
       base="$(basename "$zipfile")"
-      if is_ignored "$base"; then
-        continue  # quietly skip
+      if should_ignore "$base"; then
+        continue
       fi
-
       dest="$ROMROOT/$target/$base"
       if [[ -f "$dest" && "$OVERWRITE" != "1" ]]; then
-        : # silently skip
-      else
-        cp -f "$zipfile" "$dest"
+        continue
       fi
+      cp -f "$zipfile" "$dest"
     done < <(find "$sysdir" -maxdepth 1 -type f -name '*.zip' -print0)
 
   done < <(find "$ROOT_EXPANDED" -maxdepth 1 -mindepth 1 -type d -print0)
-
-  log "✔ EmuDeck homebrew installed."
 fi
 
 log "=== Done. ==="
