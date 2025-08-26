@@ -108,6 +108,7 @@ if [[ "$EMUDECK" == "1" ]]; then
     "wingwarriors"      # WingWarriors.zip or Wing Warriors.zip
     "brokencircle"      # BrokenCircle.zip / Broken Circle.zip
     "abbaye"            # Abbaye_des_Morts.zip variants
+    "lethalwedding"     #
   )
 
   normalize() {
