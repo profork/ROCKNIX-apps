@@ -102,7 +102,7 @@ if [[ "$EMUDECK" == "1" ]]; then
     esac
   }
 
-  # Ignore list 
+  # Ignore list
   IGNORE_LIST=(
     "Alter_Ego.zip"
     "REM.zip"
@@ -130,17 +130,14 @@ if [[ "$EMUDECK" == "1" ]]; then
 
     while IFS= read -r -d '' zipfile; do
       base="$(basename "$zipfile")"
-
       if is_ignored "$base"; then
-        log "✘ Ignored: $base"
-        continue
+        continue  # quietly skip
       fi
 
       dest="$ROMROOT/$target/$base"
       if [[ -f "$dest" && "$OVERWRITE" != "1" ]]; then
-        log "✔ Exists, skipping: $dest"
+        : # silently skip
       else
-        log "→ Copy: $base → $target/"
         cp -f "$zipfile" "$dest"
       fi
     done < <(find "$sysdir" -maxdepth 1 -type f -name '*.zip' -print0)
