@@ -24,6 +24,13 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-deskto
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh  | bash
 ```
+---
+## Brave Browser
+
+Worked on Powkiddy X55/2GB and Orange Pi 5/4gb in Panfrost mode.
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
+```
 
 ---
 
