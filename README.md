@@ -40,8 +40,9 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh  | bash
 </h2>
 
 
-Worked on Powkiddy X55/2GB and Orange Pi 5/4gb in Panfrost mode.
-Includes Launchers for Geforce Now, Xcloud, and Amazon Luna
+* Worked on Powkiddy X55/2GB and Orange Pi 5/4gb in Panfrost mode.
+* Rockchip SOC users need Panfrost Mode
+* Includes Launchers for Geforce Now, Xcloud, and Amazon Luna
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 ```
