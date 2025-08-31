@@ -16,7 +16,13 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-deskto
 
 ---
 
-## 🦊 Firefox  
+<h2>
+  <img width="32" height="32" 
+       src="https://github.com/user-attachments/assets/07ffca9d-c63b-4b63-8fcd-628e16abc85e" 
+       alt="Firefox logo" 
+       style="vertical-align: middle; margin-right: 8px;" />
+  Firefox  Browser
+</h2>
 
 *(Compatibility varies -- SM8550/ODIN 2 and RK3588 Worked , RK3566 didn't work -- 4gb RAM seems to be minimum)
 
@@ -24,17 +30,32 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-deskto
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh  | bash
 ```
----
-## Brave Browser
+--- 
+<h2>
+  <img width="32" height="32" 
+       src="https://github.com/user-attachments/assets/c5a0b12f-047f-4a8a-9fc9-1c50098aca49" 
+       alt="Brave logo" 
+       style="vertical-align: middle; margin-right: 8px;" />
+  Brave Browser
+</h2>
+
 
 Worked on Powkiddy X55/2GB and Orange Pi 5/4gb in Panfrost mode.
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 ```
-
+Includes Launchers for Geforce Now, Xcloud, and Amazon Luna
 ---
+<h2>
+  <img width="32" height="32" 
+       src="https://github.com/user-attachments/assets/b23f1d43-16ab-4016-9981-fd69446cd6ec"
+       src="https://github.com/user-attachments/assets/21f86d42-384b-4908-94fb-7a8290f08a89"
+       alt="Librewolf + YT logo" 
+       style="vertical-align: middle; margin-right: 8px;" />
+LibreWolf + YouTube Leanback (TV UI)
+</h2>
 
-## 🦊 LibreWolf + YouTube Leanback (TV UI)
+
 
 Launches LibreWolf with a custom profile tailored for YouTube Leanback (TV UI).  
 Includes GPTK mappings for full gamepad navigation in Youtube Leanback.
@@ -47,8 +68,14 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/librewolf/librewolf.sh 
 ```
 
 ---
+<h2>
+  <img width="32" height="32" 
+       src="https://github.com/user-attachments/assets/7db1dee1-49ad-4df7-8f40-b17d9646a01e"
+       alt="Chromium" 
+       style="vertical-align: middle; margin-right: 8px;" />
+Chromium (Alpine Chroot)
+</h2>
 
-## 🌐 Chromium (Alpine Chroot)
 
 Chromium web browser with web app shortcuts to:
 - GeForce Now  
@@ -66,7 +93,14 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chromium/chromium.sh | 
 
 ---
 
-## 📺 Kodi (Runimage Arch Container)
+
+<h2>
+  <img width="64" height="64" 
+       src="https://github.com/user-attachments/assets/0a6f97d7-a4f4-4bd2-91f2-985417a2f1fc"
+       alt="Kodi" 
+       style="vertical-align: middle; margin-right: 8px;" />
+Kodi Media Center in Arch Container
+</h2>
 
 *Kodi media Center in an Arch Container.
 
