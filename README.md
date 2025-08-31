@@ -41,10 +41,11 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh  | bash
 
 
 Worked on Powkiddy X55/2GB and Orange Pi 5/4gb in Panfrost mode.
+Includes Launchers for Geforce Now, Xcloud, and Amazon Luna
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 ```
-Includes Launchers for Geforce Now, Xcloud, and Amazon Luna
+
 ---
 <h2>
   <img width="32" height="32" 
