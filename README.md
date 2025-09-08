@@ -20,7 +20,8 @@ ___
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja/caja-install.sh | bash
 ```
-Mouse / Keyboard Recommended
+Mouse / Keyboard Recommended.
+Rockchip users enable panfrost drivers.
 
 ---
 
