@@ -78,6 +78,4 @@ for m in ("pygame","requests"):
         print(f"  {m}: FAIL ({e})")
 PYCODE
 
-echo
-echo "Run your game with:"
-echo "  $PY /storage/roms/ports/RGSX"
+
