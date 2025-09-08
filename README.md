@@ -13,7 +13,13 @@ Runimage Arch Container running XFCE Desktop
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-desktop.sh | bash
 ```
 *First Launch can take a while as it downloads Desktop packages from Arch Repositories in background.
+___
 
+
+## Caja GUI file manager and Engrampa Archiver (zip, rar, 7zip etc) via Runimage
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja.sh | bash
+```
 ---
 
 <h2>
