@@ -18,7 +18,7 @@ ___
 
 ## Caja GUI file manager and Engrampa Archiver (zip, rar, 7zip etc) via Runimage
 ```
-curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja.sh | bash
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja/caja-install.sh | bash
 ```
 Mouse / Keyboard Recommended
 
