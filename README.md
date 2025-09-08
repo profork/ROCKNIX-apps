@@ -132,7 +132,9 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/music.sh | bash
 ---
 ## Emudeck Store, Batocera, & Reg-Linux free Homebrew Roms pack -- Roms that come with those distros
 
-
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/freebatroms.sh | bash
+```
 
 ---
 
@@ -148,9 +150,7 @@ Useful lists:
 For Apps/Packages `soar list 'pkgcache' | more`
 For Bin (CLI tools) `soar list 'bincache' | more`
 
-```
-curl -L https://github.com/profork/ROCKNIX-apps/raw/main/freebatroms.sh | bash
-```
+
 ---
 ## 🧰 PKGX (CLI Tool Manager)
 
