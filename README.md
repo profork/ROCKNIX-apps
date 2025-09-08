@@ -20,6 +20,8 @@ ___
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja.sh | bash
 ```
+Mouse / Keyboard Recommended
+
 ---
 
 <h2>
