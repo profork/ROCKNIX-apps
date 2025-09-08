@@ -1,9 +1,9 @@
 #!/bin/sh
-# pdeps.sh — robust Python deps installer for RGSX
+
 
 set -e
 
-REQ_DIR="/storage/roms/ports/RGSX"
+
 REQ_FILE="$REQ_DIR/requirements.txt"
 
 # 1) Pick a Python interpreter
@@ -22,7 +22,7 @@ PY="$(pick_python)"
 
 # 2) Ensure a requirements.txt exists
 if [ ! -f "$REQ_FILE" ]; then
-  mkdir -p "$REQ_DIR"
+
   cat >"$REQ_FILE" <<'EOF'
 pygame==2.6.1
 requests
