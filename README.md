@@ -144,6 +144,12 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/music.sh | bash
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/freebatroms.sh | bash
 ```
+---
+## Flatpak via Runimage
+
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/flatpak/flatpak.sh | bash
+```
 
 ---
 
