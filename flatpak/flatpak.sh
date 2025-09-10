@@ -4,6 +4,13 @@
 # - Wrapper only uses dbus-run-session for `flatpak run …`
 # - Adds XDG_DATA_DIRS so desktop entries show up without a session restart
 
+clear
+echo "Installing Flatpak RunImage from ROCKNIX-apps repo..."
+sleep 3
+clear
+echo "Thanks to VHSgunzo for Runimage"
+sleep 5
+
 set -eu
 
 # ===== CONFIG: your hosted RunImage =====
