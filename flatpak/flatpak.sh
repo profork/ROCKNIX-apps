@@ -132,6 +132,7 @@ echo
 echo "✅ Installed:"
 echo "  RunImage : $RI_IMAGE"
 echo "  Wrapper  : $WRAP  (takes precedence via PATH)"
+echo "  Flatpak storage : /storage/flatpak
 echo
 echo "Open a NEW shell (or 'source /storage/.profile'), then try:"
 echo "  flatpak --version"
