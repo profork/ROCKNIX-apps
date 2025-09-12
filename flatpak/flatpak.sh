@@ -147,6 +147,6 @@ echo " * Some apps that refuse to run as root may need their root check / euid m
 echo ""
 echo ""
 echo " * To turn off emulationstation to test some apps without using ports launcher"
-echo "   run systemctl stop essway / systemctl start essway to restart"
+echo "   run systemctl stop essway / systemctl start essway to restart on many devices (not H700)"
 
 echo " * Visit flathub.org for a full list of apps."
