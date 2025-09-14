@@ -137,6 +137,7 @@ Install:
 ```bash
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/flatpak/flatpak.sh | bash
 ```
+Chromium/Electron based apps refuse to run from wrapper.
 
 ---
 
