@@ -77,7 +77,7 @@ Chromium browser with shortcuts for:
 - Amazon Luna  
 - Xbox Cloud Gaming  
 
-*(Mouse/keyboard required to log in. Works on SM8550/ODIN 2. RK3566 and RK3588 need 6–8GB RAM.)*
+*(Mouse/keyboard required to log in. Works on SM8550/ODIN 2. Didn't work on RK3566 and RK3588--appears to need 6–8GB RAM.)*
 
 Install:
 ```bash
