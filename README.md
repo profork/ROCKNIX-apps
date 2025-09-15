@@ -28,6 +28,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/steam.sh | bash
 ```
 
 *Mouse/keyboard recommended. Starts in desktop mode. Experimental. High end device recommended. Takes a while to Start up*
+
 ---
 
 ## 📂 Caja + Engrampa (File Manager & Archiver)
