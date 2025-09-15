@@ -16,8 +16,8 @@ Install:
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-desktop.sh | bash
 ```
 
-*First launch may take a while as it downloads Arch desktop packages in the background.*
-*Mouse/Keyboard recommended
+*First launch may take a while as it downloads Arch desktop packages in the background. Mouse/Kb recommended*
+
 ---
 
 ## 📂 Caja + Engrampa (File Manager & Archiver)
@@ -50,6 +50,8 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh | bash
 * Rockchip SoCs require Panfrost.  
 * Includes launchers for GeForce NOW, Xbox Cloud, and Amazon Luna.
  * Mouse/Keyboard needed
+
+   
 Install:
 ```bash
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
