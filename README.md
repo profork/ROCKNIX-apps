@@ -27,7 +27,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/desktop/runimage-deskto
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/steam.sh | bash
 ```
 
-*Mouse/keyboard recommended. Starts in desktop mode. Experimental. High end device/6gb+ recommended. Takes a while to Start up*
+*Mouse/keyboard recommended. Starts in desktop mode. Experimental. High end device/6gb+ recommended. Steam input doesn't appear to work. Relies on games native controller support fallback. Takes a while to Start up*
 
 ---
 
