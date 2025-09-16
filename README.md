@@ -72,7 +72,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 
 ## 📺 LibreWolf + YouTube Leanback (TV UI)
 
-Launches LibreWolf plus a separate custom profile tailored for YouTube Leanback.  
+Launches LibreWolf plus a separate custom launcher profile tailored for YouTube Leanback.  
 Includes GPTK mappings for full gamepad navigation.  
 *(Recommended for lower-end devices.)*
 
