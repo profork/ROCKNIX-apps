@@ -16,7 +16,7 @@ GPTK_FULL="$PORTS_DIR/brave.gptk"           # full mapping
 GPTK_HOTKEY="$PORTS_DIR/brave_hotkey.gptk" # hotkey-only mapping
 BRAVE_LAUNCHER="$PORTS_DIR/Brave.sh"
 
-BRAVE_URL="https://github.com/ivan-hc/Brave-appimage/releases/download/continuous-stable/Brave-Web-Browser-stable-1.81.137-aarch64.AppImage"
+BRAVE_URL="https://github.com/profork/ROCKNIX-apps/releases/download/r1/Brave-Web-Browser-stable-1.82.166-aarch64.AppImage"
 RUNTIME_URL="https://github.com/profork/ROCKNIX-apps/releases/download/r1/chromium-runtime.tar.gz"
 
 BRAVE_APPIMAGE="${APP_DIR}/Brave.AppImage"
