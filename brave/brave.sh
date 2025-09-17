@@ -115,7 +115,7 @@ EXTRA_FLAGS="\$EXTRA_FLAGS --disable-gpu --use-gl=swiftshader"
 gptokeyb -p "Brave" -c "$GPTK_FULL" -k brave &>/dev/null &
 sleep 1
 
-exec "$BRAVE_APPIMAGE" \$EXTRA_FLAGS "\$@"
+"$BRAVE_APPIMAGE" \$EXTRA_FLAGS "\$@"
 EOF
 chmod +x "$BRAVE_LAUNCHER"
 
