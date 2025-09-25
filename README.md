@@ -74,7 +74,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/firefox.sh | bash
 
 ---
 
-## 🌐 Brave Browser
+## 🌐 Brave Browser (AppImage)
 
 * Tested on Powkiddy X55 (2GB) and Orange Pi 5 (4GB) in Panfrost mode.  
 * Rockchip SoCs require Panfrost.  
@@ -86,7 +86,18 @@ Install:
 ```bash
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 ```
+---
+https://github.com/profork/ROCKNIX-apps/blob/main/ugc.sh
+## 🌐Ungoogled-Chromium (AppImage)
 
+* Rockchip SoCs require Panfrost.   
+* Mouse/Keyboard or Touch keyboard needed
+
+   
+Install:
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/ugc.sh | bash
+```
 ---
 
 ## 📺 LibreWolf + YouTube Leanback (TV UI)
