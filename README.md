@@ -59,8 +59,8 @@ Rockchip SOC users switch to panfrost drivers
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/greenlight.sh | bash
 ```
-Needs Mouse/Kb and or touchpad with onscreen kb to login / exit
-Rockchip SOC devices use panfrost.
+* Needs Mouse/Kb and or touchpad with onscreen kb to login / exit
+* Rockchip SOC devices use panfrost.
 
 ---
 ## 🌐 Firefox Browser
