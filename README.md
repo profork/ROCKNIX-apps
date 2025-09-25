@@ -52,7 +52,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/vacuumtube.sh | bash
 Rockchip SOC users switch to panfrost drivers
 
 ---
----
+
 
  ## 🎮 Greenlight (XBOX remote streaming and Xcloud Client)
 
