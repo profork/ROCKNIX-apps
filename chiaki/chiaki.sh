@@ -1,10 +1,5 @@
 #!/bin/bash
-# Rocknix Chiaki-NG Installer (aarch64) — AppImage + chaiki-runtime bundle
-# - Installs to /storage/Applications/chiaki-ng
-# - Downloads your chaiki runtime (chromium-runtime with extra libva, SDL2, etc.)
-# - Pre-extracts the Chiaki-NG AppImage
-# - Creates /storage/roms/ports/ChiakiNG.sh (no gptokeyb)
-# - Launcher wires Qt plugins properly and prefers system SDL2 (ALSA-capable)
+# Rocknix Chiaki-NG Installer (aarch64) — AppImage + chaiki-runtime bundle (no symlinks)
 
 set -euo pipefail
 
@@ -20,7 +15,7 @@ APPIMAGE_PATH="${APP_DIR}/ChiakiNG.AppImage"
 EXTRACT_DIR="${APP_DIR}/chiaki-extracted"
 
 RUNTIME_TGZ="${APP_DIR}/chiaki-runtime.tar.gz"
-RUNTIME_DIR="${APP_DIR}/chromium-runtime"   # EXPECTS a real dir after extraction
+RUNTIME_DIR="${APP_DIR}/chromium-runtime"   # real directory after extraction
 
 LAUNCHER_PATH="${PORTS_DIR}/ChiakiNG.sh"
 
@@ -55,20 +50,22 @@ if ! wget -O "$RUNTIME_TGZ" "$RUNTIME_URL"; then
 fi
 
 echo "📦 Extracting runtime…"
-# Extract into APP_DIR; tarball contains top-level chromium-runtime/
+# Remove any old runtime (dir or symlink) so we don't collide/mix
+rm -rf "$RUNTIME_DIR"
+
+# Extract into APP_DIR; tarball must contain top-level chromium-runtime/
 tar -xzf "$RUNTIME_TGZ" -C "$APP_DIR"
 rm -f "$RUNTIME_TGZ"
 
-# Validate runtime layout (no symlink tricks)
+# Validate runtime layout (no symlink tricks, just the real dir)
 if [ ! -f "${RUNTIME_DIR}/lib/libnss3.so" ]; then
   echo "❌ Runtime seems incomplete: ${RUNTIME_DIR}/lib/libnss3.so not found."
-  echo "   Make sure the tarball top-level is 'chromium-runtime/'."
+  echo "   Ensure the tarball’s top-level folder is exactly 'chromium-runtime/'."
   exit 1
 fi
-# Ensure wrapper is executable
 chmod +x "${RUNTIME_DIR}/run-with-runtime.sh" 2>/dev/null || true
 
-# --- Pre-extract the AppImage (more reliable env handling) ---
+# --- Pre-extract the AppImage ---
 echo "🗜️  Extracting AppImage payload…"
 rm -rf "$EXTRACT_DIR"
 TMPDIR="${APP_DIR}/_extract-tmp"
@@ -78,21 +75,18 @@ mkdir -p "$TMPDIR"
 mv "$TMPDIR/squashfs-root" "$EXTRACT_DIR"
 rm -rf "$TMPDIR"
 
-# Find inner executable (prefer AppRun; fall back to chiaki/chiaki-ng binaries)
+# Find inner executable
 CHIAKI_BIN=""
-for CAND in \
+for C in \
   "${EXTRACT_DIR}/AppRun" \
   "${EXTRACT_DIR}/usr/bin/chiaki-ng" \
   "${EXTRACT_DIR}/usr/bin/chiaki" \
   "${EXTRACT_DIR}/chiaki-ng" \
   "${EXTRACT_DIR}/chiaki"
 do
-  if [ -x "$CAND" ]; then CHIAKI_BIN="$CAND"; break; fi
+  [ -x "$C" ] && CHIAKI_BIN="$C" && break
 done
-if [ -z "$CHIAKI_BIN" ]; then
-  echo "❌ Couldn’t locate inner Chiaki-NG binary under $EXTRACT_DIR"
-  exit 1
-fi
+[ -n "$CHIAKI_BIN" ] || { echo "❌ Couldn’t locate inner Chiaki-NG binary under $EXTRACT_DIR"; exit 1; }
 chmod +x "$CHIAKI_BIN" || true
 
 # (Nice-to-have) Prefer ALSA-capable system SDL2 persistently if present
@@ -225,5 +219,5 @@ echo "✅ Chiaki-NG installed."
 echo "▶️ Launch from: $LAUNCHER_PATH"
 echo "   AppImage:    $APPIMAGE_PATH"
 echo "   Extracted:   $EXTRACT_DIR"
-echo "   Runtime:     $RUNTIME_DIR (extracted, not a symlink)"
+echo "   Runtime:     $RUNTIME_DIR (real dir, no symlink)"
 echo "ℹ️  No gptokeyb. Default audio is ALSA (override via SDL_AUDIODRIVER if needed)."
