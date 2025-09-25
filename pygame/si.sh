@@ -1,49 +1,80 @@
-#!/bin/bash
-# Rocknix — OUI installer/runner
-
+#!/usr/bin/env bash
 set -euo pipefail
 
-TMP_DIR="/storage/tmp/oui.$$"
-ZIP_URL="https://github.com/profork/ROCKNIX-apps/raw/main/pygame/oui.zip"
-ZIP_PATH="$TMP_DIR/oui.zip"
+# --- Config ---
+URL="https://github.com/profork/ROCKNIX-apps/raw/main/pygame/oui.7z"
 
-mkdir -p "$TMP_DIR"
+# Prefer persistent tmp on Rocknix if writable
+if [ -w /storage/tmp ] 2>/dev/null; then
+  TMP="$(mktemp -d /storage/tmp/oui.XXXXXX)"
+else
+  TMP="$(mktemp -d)"
+fi
 
-# --- download helper ---
-fetch() {
-  local url="$1" out="$2"
-  if command -v curl >/dev/null; then
-    curl -L --fail --retry 3 -o "$out" "$url"
-  elif command -v wget >/dev/null; then
-    wget -O "$out" "$url"
-  else
-    echo "Need curl or wget"
-    exit 1
-  fi
+ARCHIVE="$TMP/oui.7z"
+OUTDIR="$TMP/extracted"
+EXPECT_SCRIPT="$TMP/unwrap.exp"
+
+cleanup() { rm -rf "$TMP"; }
+trap cleanup EXIT
+
+# --- Ensure pkgx is present ---
+if ! command -v pkgx >/dev/null 2>&1; then
+  echo "❌ pkgx not found. Please install pkgx first." >&2
+  exit 1
+fi
+
+SEVENZ="pkgx 7z"
+
+# --- Download ---
+echo "📥 Downloading encrypted archive…"
+if command -v curl >/dev/null 2>&1; then
+  curl -fsSL -o "$ARCHIVE" "$URL"
+else
+  wget -q -O "$ARCHIVE" "$URL"
+fi
+[ -s "$ARCHIVE" ] || { echo "❌ Download failed or empty file." >&2; exit 1; }
+
+# --- Read passphrase securely ---
+read -r -s -p "Passphrase: " PW
+echo
+[ -n "$PW" ] || { echo "❌ No passphrase entered."; exit 2; }
+
+mkdir -p "$OUTDIR"
+
+# --- Extract (prefer expect if present) ---
+if command -v expect >/dev/null 2>&1; then
+  cat >"$EXPECT_SCRIPT" <<'EOF'
+#!/usr/bin/expect -f
+set timeout -1
+set bin [lindex $argv 0]
+set archive [lindex $argv 1]
+set outdir [lindex $argv 2]
+set passwd [lindex $argv 3]
+
+spawn {*}$bin x -y -o$outdir $archive
+expect {
+  -re "(Enter password.*:|Enter password.*)" {
+    send -- "$passwd\r"
+    exp_continue
+  }
+  eof
 }
-
-echo "📥 Downloading oui.zip…"
-fetch "$ZIP_URL" "$ZIP_PATH"
-
-# --- unzip (password required) ---
-echo "🔑 Please enter the password to extract oui.zip:"
-if command -v unzip >/dev/null; then
-  unzip "$ZIP_PATH" -d "$TMP_DIR"
-elif command -v bsdtar >/dev/null; then
-  bsdtar -xf "$ZIP_PATH" -C "$TMP_DIR"
-elif busybox unzip -v >/dev/null 2>&1; then
-  busybox unzip "$ZIP_PATH" -d "$TMP_DIR"
+EOF
+  chmod +x "$EXPECT_SCRIPT"
+  "$EXPECT_SCRIPT" "$SEVENZ" "$ARCHIVE" "$OUTDIR" "$PW"
 else
-  echo "Need unzip/bsdtar/busybox unzip"
-  exit 1
+  echo "⚠️  'expect' not found; using fallback (password may appear briefly in process args)."
+  $SEVENZ x -y -o"$OUTDIR" -p"$PW" "$ARCHIVE"
 fi
 
-# --- run oui.sh ---
-if [ -f "$TMP_DIR/oui.sh" ]; then
-  chmod +x "$TMP_DIR/oui.sh"
-  echo "▶ Running oui.sh…"
-  bash "$TMP_DIR/oui.sh"
-else
-  echo "❌ Could not find oui.sh inside archive"
-  exit 1
+# --- Locate and run oui.sh ---
+OUI_SH="$(find "$OUTDIR" -type f -name 'oui.sh' -print -quit || true)"
+if [ -z "$OUI_SH" ]; then
+  echo "❌ Installer (oui.sh) not found inside archive." >&2
+  exit 3
 fi
+
+chmod +x "$OUI_SH"
+echo "▶ Running $(basename "$OUI_SH")…"
+bash "$OUI_SH"
