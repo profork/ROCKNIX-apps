@@ -20,7 +20,7 @@ APPIMAGE_PATH="${APP_DIR}/ChiakiNG.AppImage"
 EXTRACT_DIR="${APP_DIR}/chiaki-extracted"
 
 RUNTIME_TGZ="${APP_DIR}/chiaki-runtime.tar.gz"
-RUNTIME_DIR_LINK="${APP_DIR}/chromium-runtime"
+RUNTIME_DIR="${APP_DIR}/chromium-runtime"   # EXPECTS a real dir after extraction
 
 LAUNCHER_PATH="${PORTS_DIR}/ChiakiNG.sh"
 
@@ -55,18 +55,18 @@ if ! wget -O "$RUNTIME_TGZ" "$RUNTIME_URL"; then
 fi
 
 echo "📦 Extracting runtime…"
-# Extract into APP_DIR; tarball should contain top-level chromium-runtime/
+# Extract into APP_DIR; tarball contains top-level chromium-runtime/
 tar -xzf "$RUNTIME_TGZ" -C "$APP_DIR"
+rm -f "$RUNTIME_TGZ"
 
-# Locate runtime dir by libnss3 presence and link it at ${RUNTIME_DIR_LINK}
-RUNTIME_DIR_FOUND="$(find "$APP_DIR" -type f -name 'libnss3.so' 2>/dev/null | head -n1 || true)"
-if [ -z "$RUNTIME_DIR_FOUND" ]; then
-  echo "❌ Could not locate runtime 'libnss3.so' after extraction."
+# Validate runtime layout (no symlink tricks)
+if [ ! -f "${RUNTIME_DIR}/lib/libnss3.so" ]; then
+  echo "❌ Runtime seems incomplete: ${RUNTIME_DIR}/lib/libnss3.so not found."
+  echo "   Make sure the tarball top-level is 'chromium-runtime/'."
   exit 1
 fi
-RUNTIME_DIR_FOUND="$(dirname "$RUNTIME_DIR_FOUND")/.."
-ln -snf "$RUNTIME_DIR_FOUND" "$RUNTIME_DIR_LINK"
-rm -f "$RUNTIME_TGZ"
+# Ensure wrapper is executable
+chmod +x "${RUNTIME_DIR}/run-with-runtime.sh" 2>/dev/null || true
 
 # --- Pre-extract the AppImage (more reliable env handling) ---
 echo "🗜️  Extracting AppImage payload…"
@@ -98,8 +98,8 @@ chmod +x "$CHIAKI_BIN" || true
 # (Nice-to-have) Prefer ALSA-capable system SDL2 persistently if present
 if [ -f /usr/lib/libSDL2-2.0.so.0 ]; then
   echo "🎧 Adding system SDL2 (ALSA-capable) to runtime…"
-  cp -n /usr/lib/libSDL2-2.0.so.0 "${RUNTIME_DIR_LINK}/lib/" || true
-  ln -snf libSDL2-2.0.so.0 "${RUNTIME_DIR_LINK}/lib/libSDL2.so"
+  cp -n /usr/lib/libSDL2-2.0.so.0 "${RUNTIME_DIR}/lib/" || true
+  ln -snf libSDL2-2.0.so.0 "${RUNTIME_DIR}/lib/libSDL2.so"
 fi
 
 # --- Create single Ports launcher (no gptokeyb), robust cwd & logging ---
@@ -112,8 +112,8 @@ set -Eeuo pipefail
 
 APP_DIR="/storage/Applications/chiaki-ng"
 EXTRACT_DIR="${APP_DIR}/chiaki-extracted"
-RUNTIME_DIR_LINK="${APP_DIR}/chromium-runtime"
-RUNTIME_LIB="${RUNTIME_DIR_LINK}/lib"
+RUNTIME_DIR="${APP_DIR}/chromium-runtime"
+RUNTIME_LIB="${RUNTIME_DIR}/lib"
 PROFILE_DIR="/storage/.chiaki-ng"
 LOG="/tmp/chiaki-ng.log"
 
@@ -198,7 +198,7 @@ LD_MERGED="${LD_MERGED:+$LD_MERGED:}$SYS_LIBS"
 export LD_LIBRARY_PATH="$LD_MERGED${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 
 # Certs
-export SSL_CERT_FILE="${RUNTIME_DIR_LINK}/certs/ca-certificates.crt"
+export SSL_CERT_FILE="${RUNTIME_DIR}/certs/ca-certificates.crt"
 export SSL_CERT_DIR="$(dirname "$SSL_CERT_FILE")"
 
 # Prefer system SDL2 (ALSA-capable) and ALSA backend
@@ -209,7 +209,7 @@ export SDL_AUDIODRIVER="${SDL_AUDIODRIVER:-alsa}"
 cd "$EXTRACT_DIR"
 
 # Runtime wrapper (preferred), keep output visible and logged
-RWR="$(find "$RUNTIME_DIR_LINK" -maxdepth 4 -type f -name 'run-with-runtime.sh' 2>/dev/null | head -n1 || true)"
+RWR="$(find "$RUNTIME_DIR" -maxdepth 4 -type f -name 'run-with-runtime.sh' 2>/dev/null | head -n1 || true)"
 if [ -x "$RWR" ]; then
   "$RWR" "$CHIAKI_BIN" "$@" 2>&1 | tee -a "$LOG"
   exit ${PIPESTATUS[0]}
@@ -225,5 +225,5 @@ echo "✅ Chiaki-NG installed."
 echo "▶️ Launch from: $LAUNCHER_PATH"
 echo "   AppImage:    $APPIMAGE_PATH"
 echo "   Extracted:   $EXTRACT_DIR"
-echo "   Runtime:     $RUNTIME_DIR_LINK (from your chaiki-runtime tarball)"
-echo "ℹ️  No gptokeyb is used. Default audio backend is ALSA (override via SDL_AUDIODRIVER if needed)."
+echo "   Runtime:     $RUNTIME_DIR (extracted, not a symlink)"
+echo "ℹ️  No gptokeyb. Default audio is ALSA (override via SDL_AUDIODRIVER if needed)."
