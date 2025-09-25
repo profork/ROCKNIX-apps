@@ -44,8 +44,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja/caja-install.sh | 
 
 ---
 
-
-🎬 ## Vacuumtube - Youtube Leanback TV (more features than Librewolf version)
+ ## 🎬 Vacuumtube - Youtube Leanback TV (more features than Librewolf version)
 
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/vacuumtube.sh | bash
