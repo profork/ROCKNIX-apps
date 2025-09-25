@@ -87,7 +87,7 @@ Install:
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/brave/brave.sh | bash
 ```
 ---
-https://github.com/profork/ROCKNIX-apps/blob/main/ugc.sh
+
 ## 🌐Ungoogled-Chromium (AppImage)
 
 * Rockchip SoCs require Panfrost.   
