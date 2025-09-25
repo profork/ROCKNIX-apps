@@ -45,7 +45,7 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/caja/caja-install.sh | 
 ---
 
  ## 🎬 Vacuumtube - Youtube Leanback TV (more features than Librewolf version)
-
+Install:
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/vacuumtube.sh | bash
 ```
@@ -55,7 +55,7 @@ Rockchip SOC users switch to panfrost drivers
 
 
  ## 🎮 Greenlight (XBOX remote streaming and Xcloud Client)
-
+Install:
 ```
 curl -L https://github.com/profork/ROCKNIX-apps/raw/main/greenlight.sh | bash
 ```
