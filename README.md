@@ -63,6 +63,20 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/greenlight.sh | bash
 * Rockchip SOC devices use panfrost.
 
 ---
+## 🎮 Chaiki (PS4/5 Streamer)
+
+
+
+Install:
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/chiaki/chiaki.sh | bash
+```
+*Only seems to work on adreno devices SM8250/SM8550
+
+*Touch/kb or mouse/kb needed
+
+---
+
 ## 🌐 Firefox Browser
 
 *(Compatibility varies — works on SM8550/ODIN 2 and RK3588; does not work on RK3566. 4GB RAM minimum.)*
