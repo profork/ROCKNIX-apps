@@ -52,6 +52,17 @@ curl -L https://github.com/profork/ROCKNIX-apps/raw/main/vacuumtube.sh | bash
 Rockchip SOC users switch to panfrost drivers
 
 ---
+---
+
+ ## 🎮 Greenlight (XBOX remote streaming and Xcloud Client)
+
+```
+curl -L https://github.com/profork/ROCKNIX-apps/raw/main/greenlight.sh | bash
+```
+Needs Mouse/Kb and or touchpad with onscreen kb to login / exit
+Rockchip SOC devices use panfrost.
+
+
 ## 🌐 Firefox Browser
 
 *(Compatibility varies — works on SM8550/ODIN 2 and RK3588; does not work on RK3566. 4GB RAM minimum.)*
