@@ -81,8 +81,8 @@ OPTIONS=(
 )
 
 # ---- Show menu ONCE (single-select), run, then exit ----
-CHOICE=$(dialog --clear --backtitle "Profork ROCKNIX Apps" \
-                --title "ROCKNIX Apps — Single Install" \
+CHOICE=$(dialog --clear --backtitle "Profork ROCKNIX-Apps" \
+                --title "ROCKNIX-Apps" \
                 --menu "Choose one item to install:" 25 120 18 \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty) || { echo "Cancelled."; exit 1; }
