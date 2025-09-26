@@ -25,7 +25,7 @@ curl -L bit.ly/profork0 | bash
 **Steam running in arch runimage container**
 
 
-*Mouse/keyboard recommended. Starts in desktop mode. Experimental. High end device/6gb+ recommended. Steam input doesn't appear to work on built in controllers, but appears to work on external controllers. Relies on the games native controller support for internal controller fallback. Takes a while to Start up*
+*Mouse/keyboard recommended. Starts in desktop mode. Experimental. High end device/6gb+ recommended. Steam input doesn't appear to work on built in controllers, but appears to work on external controllers. Relies on the games native controller support for internal controller fallback. Takes a while to Start up.*
 
 ---
 
@@ -75,7 +75,7 @@ Install:
 * Tested on Powkiddy X55 (2GB) and Orange Pi 5 (4GB) in Panfrost mode.  
 * Rockchip SoCs require Panfrost.  
 * Includes launchers for GeForce NOW, Xbox Cloud, and Amazon Luna.
- * Mouse/Keyboard needed
+* Mouse/Keyboard needed
 
    
 ---
