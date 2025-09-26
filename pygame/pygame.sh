@@ -1,5 +1,5 @@
 #!/bin/sh
-# pdeps.sh — robust Python deps installer for RGSX
+
 
 set -e
 
