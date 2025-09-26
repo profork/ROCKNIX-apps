@@ -28,7 +28,7 @@ sleep 10
 # ---- deps / arch ----
 set -euo pipefail
 architecture="$(uname -m)"
-case "$architecture" in x86_64|aarch64) ;; *) echo "Unsupported CPU arch: $architecture"; exit 1;; esac
+case "$architecture" in aarch64) ;; *) echo "Unsupported CPU arch: $architecture"; exit 1;; esac
 need(){ command -v "$1" >/dev/null 2>&1 || { echo "Missing: $1"; exit 1; }; }
 need dialog; { command -v curl >/dev/null 2>&1 || command -v wget >/dev/null 2>&1; } || { echo "Missing: curl or wget"; exit 1; }
 
