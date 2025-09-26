@@ -23,7 +23,7 @@ animate_text "${YELLOW}Use at your own risk.${NC}"
 # Reset color
 echo -e "${NC}"
 
-sleep 10
+sleep 5
 
 # ---- deps / arch ----
 set -euo pipefail
