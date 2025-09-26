@@ -20,7 +20,7 @@ curl -L bit.ly/profork0 | bash
 *First launch may take a while as it downloads Arch desktop packages in the background. Mouse/Kb recommended*
 
 ---
-## Steam in Runimage (experimental)
+## 🎮 Steam in Runimage (experimental)
 
 **Steam running in arch runimage container**
 
