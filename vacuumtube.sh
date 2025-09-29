@@ -70,20 +70,7 @@ echo "🎮 Writing GPTK mappings…"
 
 # Full map (for couch navigation)
 cat > "$GPTK_FULL" <<'EOF'
-up = up
-down = down
-left = left
-right = right
-a = enter
-b = esc
-x = ctrl+w
-y = ctrl+t
-start = enter
-select = esc
-left_analog_up = up
-left_analog_down = down
-left_analog_left = left
-left_analog_right = right
+
 hotkey = start+select:KEY_LEFTALT+KEY_F4
 EOF
 
