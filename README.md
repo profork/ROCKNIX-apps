@@ -55,8 +55,6 @@ Rockchip SOC users switch to panfrost drivers
 
 
 
-Install:
-
 *Only seems to work on adreno devices SM8250/SM8550
 
 *Touch/kb or mouse/kb needed
