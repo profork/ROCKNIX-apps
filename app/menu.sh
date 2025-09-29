@@ -54,6 +54,7 @@ RUN=(
   [16]="echo 'Flatpak wrapper (RunImage)...'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/flatpak/flatpak.sh | bash"
   [17]="echo 'Soar (pkg-forge)...'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/soar.sh | bash"
   [18]="echo 'PKGX (CLI tool mgr)...'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash"
+  [19]="echo 'ROCKNIX-WINE Setup tool...'; curl -L https://github.com/profork/Rocknix-WINE/raw/main/wine_setup.sh | bash"
   [99]="echo 'Exiting...'; exit 0"
 )
 
@@ -77,6 +78,7 @@ OPTIONS=(
   "16" "Flatpak wrapper (RunImage)"
   "17" "Soar (pkg-forge)"
   "18" "PKGX (CLI tool mgr)"
+  "19" "Wine Setup Tool"
   "99" "Exit"
 )
 
