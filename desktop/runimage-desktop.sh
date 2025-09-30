@@ -7,7 +7,7 @@
 # OverlayFS (FUSE) is preferred; we fall back to persistent "unpacked" mode.
 
 clear
-echo "RUNIMAGE made developed by VHSGUNZO"
+echo "RUNIMAGE developed by VHSGUNZO"
 sleep 6
 clear
 
