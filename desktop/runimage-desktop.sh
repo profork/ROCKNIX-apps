@@ -204,10 +204,9 @@ chmod +x "${LAUNCHER_SWAY}"
 cat > "${README}" <<'EOF'
 RunImage Desktop (Rocknix) installed!
 
-Modes:
-• Overlay (preferred): requires FUSE; changes saved to an OverlayFS id.
-• Unpacked fallback: if FUSE is missing, the runtime extracts into
-  /storage/system/runimage/runtime and reuses it for persistence.
+Launchers created (EmulationStation → Ports):
+• RunImage Desktop Xephyr — classic Xephyr/X11 session
+• RunImage Desktop Sway — Wayland/Sway and Flatpak-compatible
 
 Bindings:
 • /storage is mounted inside the session at the same path (/storage).
@@ -228,9 +227,7 @@ If overlay fails with “failed to utilize FUSE”:
   - Make sure you're using the correct arch build (aarch64 on ARM).
   - Ensure /dev/fuse exists (the launcher attempts to create it).
 
-Launchers created (EmulationStation → Ports):
-• RunImage Desktop Xephyr — classic Xephyr/X11 session
-• RunImage Desktop Sway — Wayland/Sway friendly and Flatpak-compatible
+
 EOF
 
 INFO_TEXT="$(cat "${README}")"
