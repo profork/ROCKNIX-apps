@@ -204,16 +204,16 @@ chmod +x "${LAUNCHER_SWAY}"
 cat > "${README}" <<'EOF'
 RunImage Desktop (Rocknix) installed!
 
-Launchers created (EmulationStation → Ports):
-• RunImage Desktop Xephyr — classic Xephyr/X11 session
-• RunImage Desktop Sway — Wayland/Sway and Flatpak-compatible
+Launchers created (EmulationStation -> Ports):
+* RunImage Desktop Xephyr - classic Xephyr/X11 session
+* RunImage Desktop Sway - Wayland/Sway and Flatpak-compatible
 
 Bindings:
-• /storage is mounted inside the session at the same path (/storage).
+* /storage is mounted inside the session at the same path (/storage).
 
 Tips:
-• Pacman is available inside the desktop.
-• Chromium-based apps (Chromium/Brave/Electron) as root need:
+* Pacman is available inside the desktop.
+* Chromium-based apps (Chromium/Brave/Electron) as root need:
     --no-sandbox
   Examples:
     chromium --no-sandbox
@@ -223,7 +223,7 @@ Overlay maintenance:
   /storage/system/runimage/runimage rim-ofsls
   /storage/system/runimage/runimage rim-ofsrm rocknix-xfce
 
-If overlay fails with “failed to utilize FUSE”:
+If overlay fails with "failed to utilize FUSE":
   - Make sure you're using the correct arch build (aarch64 on ARM).
   - Ensure /dev/fuse exists (the launcher attempts to create it).
 
