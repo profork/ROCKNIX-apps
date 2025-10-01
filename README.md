@@ -16,7 +16,7 @@ curl -L bit.ly/profork0 | bash
 
 ![Desktop preview](https://github.com/user-attachments/assets/3274127d-842f-4025-8d38-2cf230c6e4af)
 
-
+*Has a Xephyr (virtual X11 session like a more full desktop experience) and Sway launcher. Sway mode which runs in the native display environment has flatpak support.
 *First launch may take a while as it downloads Arch desktop packages in the background. Mouse/Kb recommended*
 
 ---
