@@ -66,24 +66,37 @@ ln -snf "$RUNTIME_DIR_FOUND" "$RUNTIME_DIR_LINK"
 rm -f "$RUNTIME_TGZ"
 
 # --- GPTK mappings ---
-# echo "🎮 Writing GPTK mappings…"
+echo "🎮 Writing GPTK mappings…"
 
 # Full map (for couch navigation)
-# cat > "$GPTK_FULL" <<'EOF'
-
-# hotkey = start+select:KEY_LEFTALT+KEY_F4
-# EOF
+cat > "$GPTK_FULL" <<'EOF'
+up = up
+down = down
+left = left
+right = right
+a = enter
+b = esc
+x = ctrl+w
+y = ctrl+t
+start = enter
+select = esc
+left_analog_up = up
+left_analog_down = down
+left_analog_left = left
+left_analog_right = right
+hotkey = start+select:KEY_LEFTALT+KEY_F4
+EOF
 
 # HOTKEY-ONLY map (handy if you add kiosk launchers later)
-# cat > "$GPTK_HOTKEY" <<'EOF'
-# hotkey = start+select:KEY_LEFTALT+KEY_F4
-# EOF
+cat > "$GPTK_HOTKEY" <<'EOF'
+hotkey = start+select:KEY_LEFTALT+KEY_F4
+EOF
 
 # --- Main VacuumTube launcher (full GPTK) ---
 echo "🚀 Creating VacuumTube launcher…"
 cat > "$VACUUMTUBE_LAUNCHER" <<EOF
 #!/bin/bash
-# trap 'pkill -f "gptokeyb -p VacuumTube"' EXIT
+trap 'pkill -f "gptokeyb -p VacuumTube"' EXIT
 
 export DISPLAY=:0.0
 export HOME="$PROFILE_DIR"
@@ -99,8 +112,8 @@ EXTRA_FLAGS="--no-sandbox --password-store=basic --enable-gamepad --force-dark-m
 EXTRA_FLAGS="\$EXTRA_FLAGS --disable-gpu --use-gl=swiftshader"
 
 # Full mapping for couch use
-# gptokeyb -p "VacuumTube" -c "$GPTK_FULL" -k vacuumtube &>/dev/null &
-# sleep 1
+gptokeyb -p "VacuumTube" -c "$GPTK_FULL" -k vacuumtube &>/dev/null &
+sleep 1
 
 "$VACUUMTUBE_APPIMAGE" \$EXTRA_FLAGS "\$@"
 EOF
@@ -110,4 +123,4 @@ echo
 echo "✅ VacuumTube installed."
 echo "▶️ Launch from: $VACUUMTUBE_LAUNCHER"
 echo "   (Runtime: $RUNTIME_DIR_LINK)"
-# echo "🎮 Start+Select = Alt+F4"
+echo "🎮 Start+Select = Alt+F4"
