@@ -40,7 +40,7 @@ Caja GUI file manager with Engrampa archiver (zip, rar, 7zip, etc.) via Runimage
 
  ## 🎬 Vacuumtube - Youtube Leanback TV (more features than Librewolf version)
 
-Rockchip SOC users switch to panfrost drivers
+Rockchip SOC users switch to panfrost drivers.  2GB minimum.  1GB device users use Librewolf version
 
 ---
 
