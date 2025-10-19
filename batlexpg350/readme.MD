@@ -1,6 +1,7 @@
 # Easy Rocknix BatleXP-G350 Guide
 
 > ✅ Recommended: Use a **USB Wi-Fi dongle** to make setup easier.
+
 > Known Issue: Function Key not working. (can map hotkey to select)
 
 ---
