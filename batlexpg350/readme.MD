@@ -10,7 +10,7 @@ Download and flash the following image:
 
 https://github.com/profork/ROCKNIX-apps/releases/download/r1/rocknix-g350.img.gz
 
-Thanks to **PauliBoy** for this build:  
+Thanks to **Paulyboi390** for this build:  
 https://github.com/Paulyboi390/Rocknix-G350
 
 ---
