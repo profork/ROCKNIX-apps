@@ -52,15 +52,7 @@ Caja GUI file manager with Engrampa archiver (zip, rar, 7zip, etc.) via Runimage
 * Rockchip SOC devices use panfrost.
 
 ---
-## 🎮 Chaiki (PS4/PS5 Streamer)
 
-
-
-*Only seems to work on adreno devices SM8250/SM8550
-
-*Touch/kb or mouse/kb needed
-
----
 
 ## 🌐 Firefox Browser
 
