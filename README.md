@@ -131,7 +131,7 @@ ROMs bundled with Emudeck Store, Batocera, & Reg-Linux.
 
 ## 📦 Flatpak via Runimage
 
-Chromium/Electron based apps refuse to run from wrapper.
+Newer Chromium/Electron based apps refuse to run from wrapper.
 
 ---
 
