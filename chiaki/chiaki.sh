@@ -203,14 +203,14 @@ export SDL_AUDIODRIVER="${SDL_AUDIODRIVER:-alsa}"
 cd "$EXTRACT_DIR"
 
 # Runtime wrapper (preferred), keep output visible and logged
-RWR="$(find "$RUNTIME_DIR" -maxdepth 4 -type f -name 'run-with-runtime.sh' 2>/dev/null | head -n1 || true)"
-if [ -x "$RWR" ]; then
-  "$RWR" "$CHIAKI_BIN" "$@" 2>&1 | tee -a "$LOG"
-  exit ${PIPESTATUS[0]}
-else
+# RWR="$(find "$RUNTIME_DIR" -maxdepth 4 -type f -name 'run-with-runtime.sh' 2>/dev/null | head -n1 || true)"
+#if [ -x "$RWR" ]; then
+#  "$RWR" "$CHIAKI_BIN" "$@" 2>&1 | tee -a "$LOG"
+#  exit ${PIPESTATUS[0]}
+#else
   "$CHIAKI_BIN" "$@" 2>&1 | tee -a "$LOG"
-  exit ${PIPESTATUS[0]}
-fi
+#  exit ${PIPESTATUS[0]}
+# fi
 EOF
 chmod +x "$LAUNCHER_PATH"
 
