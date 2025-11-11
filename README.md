@@ -20,6 +20,13 @@ curl -L bit.ly/profork0 | bash
 *First launch may take a while as it downloads Arch desktop packages in the background. Mouse/Kb recommended*
 
 ---
+## 🎮 Pharos Tool
+
+ Pharos is a companion tool for PortMaster designed to provide an alternative interface for managing ports from external/third party repositories bu JeodC
+ 
+ <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/ac70ce1a-0b9a-4e14-8715-6903e2926461" />
+ 
+---
 ## 🎮 Steam in Runimage (experimental)
 
 **Steam running in arch runimage container**
