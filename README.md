@@ -22,7 +22,7 @@ curl -L bit.ly/profork0 | bash
 ---
 ## 🎮 Pharos Tool
 
- Pharos is a companion tool for PortMaster designed to provide an alternative interface for managing ports from external/third party repositories bu JeodC
+ Pharos is a companion tool for PortMaster designed to provide an alternative interface for managing ports from external/third party repositories by JeodC
  
  <img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/ac70ce1a-0b9a-4e14-8715-6903e2926461" />
  
