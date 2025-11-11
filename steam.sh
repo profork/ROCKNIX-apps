@@ -51,8 +51,8 @@ _7Z="$(command -v 7z || command -v 7za)"
 
 # ===== Download =====
 echo "➤ Downloading Steam RunImage parts…"
-wget -c --tries=10 --retry-connrefused -O "${TMPDIR}/runimage-steam.7z.001" "${PART1_URL}"
-wget -c --tries=10 --retry-connrefused -O "${TMPDIR}/runimage-steam.7z.002" "${PART2_URL}"
+wget -c --tries=10 --no-check-certificate --retry-connrefused -O "${TMPDIR}/runimage-steam.7z.001" "${PART1_URL}"
+wget -c --tries=10 --no-check-certificate --retry-connrefused -O "${TMPDIR}/runimage-steam.7z.002" "${PART2_URL}"
 
 # ===== Extract (produces a single file named 'runimage') =====
 echo "➤ Extracting…"
