@@ -55,7 +55,7 @@ RUN=(
   [17]="echo 'Soar (pkg-forge)...'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/soar.sh | bash"
   [18]="echo 'PKGX (CLI tool mgr)...'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pkgx/pkgx.sh | bash"
   [19]="echo 'ROCKNIX-WINE Setup tool...'; curl -L https://github.com/profork/Rocknix-WINE/raw/main/wine_setup.sh | bash"
-  [20]="echo 'JeodC Pharos App (External Portmaster apps)'; https://github.com/profork/ROCKNIX-apps/raw/main/pharos.sh | bash"
+  [20]="echo 'JeodC Pharos App (External Portmaster apps)'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pharos.sh | bash"
   [21]="echo 'BatleXP G350 Audio Fix'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/batlexpg350/install_speaker_fix.sh | bash"
   [22]="echo 'Exiting...'; exit 0"
 )
