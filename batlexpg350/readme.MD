@@ -10,7 +10,7 @@
 
 Download and flash the following image:
 
-https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251118-battlexp-g350.img.gzz
+https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251118-battlexp-g350.img.gz
 
 
 
