@@ -2,8 +2,10 @@
 
 > ✅ Recommended: Use a **USB Wi-Fi dongle** to make setup easier.
 
-> Known Issue: Function Key not working. (can map hotkey to select)
-
+> Known Issues: 
+1. Function Key not working. (can map hotkey to select)
+2. Audio fix needed per below
+3. USB OTG Wifi dongle must be insereted before device is powered on to register.
 ---
 
 ## 1. Download & Flash Rocknix Image
