@@ -55,7 +55,7 @@ Nightly Updates are not recommended at this time due to screen panel mismatch is
 
 ---
 
-✅ **Done!** Your BatleXP-G350 should now boot Rocknix with working audio and support future updates.
+✅ **Done!** Your BatleXP-G350 should now boot Rocknix with working audio.
 
 
 
