@@ -10,10 +10,9 @@
 
 Download and flash the following image:
 
-https://github.com/profork/ROCKNIX-apps/releases/download/r1/rocknix-g350.img.gz
+https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251118-battlexp-g350.img.gzz
 
-Thanks to **Paulyboi390** for this build:  
-https://github.com/Paulyboi390/Rocknix-G350
+
 
 ---
 
@@ -50,11 +49,7 @@ chmod +x /storage/.config/autorun/speaker.sh
 
 ---
 
-## 3. (Optional) Update to Latest Rocknix Nightly
-
-Once the image is flashed and working, you can update to the latest **Rocknix RK3326 nightly `.tar`** as usual:
-
-https://nightly.rocknix.org/
+Nightly Updates are not recommended at this time due to screen panel mismatch issues.
 
 ---
 
