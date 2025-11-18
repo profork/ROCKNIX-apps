@@ -5,7 +5,7 @@
 > Known Issues: 
 1. Function Key not working. (can map hotkey to select)
 2. Audio fix needed per below
-3. USB OTG Wifi dongle must be inserted before device is powered on to register & Country Code should be selected in ES.
+3. USB OTG Wifi dongle must be inserted before device is powered on to register & Country Code should be selected in ES. (manual SSID enter is usually more reliable)
 ---
 
 ## 1. Download & Flash Rocknix Image
