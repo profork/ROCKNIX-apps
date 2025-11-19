@@ -63,14 +63,6 @@ Caja GUI file manager with Engrampa archiver (zip, rar, 7zip, etc.) via Runimage
 
 ---
 
- ## 🎮 Chiaki (PS4 & PS5 Remote Play Client)
-
-* Needs Mouse/Kb and/or touchpad with onscreen kb to login / exit
-* Rockchip SOC devices use panfrost.
-
----
-
-
 ## 🌐 Firefox Browser
 
 *(Compatibility varies — works on SM8550/ODIN 2 and RK3588; does not work on RK3566. 4GB RAM minimum.)*
