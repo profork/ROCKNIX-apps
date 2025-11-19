@@ -5,8 +5,8 @@
 > Known Issues: 
 1. Function Key not working. (can map hotkey to select)
 2. Audio fix needed per below
-3. USB OTG Wifi dongle must be inserted before device is powered on to register & Country Code should be selected in ES. (manual SSID enter is usually more reliable)
----
+3. If USB wifi dongle is inserted the wifi must be cycled off and on in the settings menu. Set the country code. Wifi SSID needs to be entered manually; won't parse names.
+4. ES battery charging indicator doesn't display, but charging LED still works.
 
 ## 1. Download & Flash Rocknix Image
 
@@ -56,6 +56,8 @@ Nightly Updates are not recommended at this time due to screen panel mismatch is
 ---
 
 ✅ **Done!** Your BatleXP-G350 should now boot Rocknix with working audio.
+
+* (Note you can toggle between libmali (default) and panfrost drivers in the system settings menu. Portmaster Menu needs panfrost mode.
 
 
 
