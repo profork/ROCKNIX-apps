@@ -5,7 +5,7 @@
 > Known Issues: 
 1. Function Key not working. (can map hotkey to select)
 2. Audio fix needed per below
-3. If USB wifi dongle is inserted the wifi must be cycled off and on in the settings menu. Set the country code. Wifi SSID needs to be entered manually; won't parse names.
+3. USB wifi dongle must be inserted before power on to be recognized, the Wifi SSID needs to be entered manually; it won't parse names, and if is reinserted after intitial detection the wifi must be cycled off and on in the settings menu.
 4. ES battery charging indicator doesn't display, but charging LED still works.
 
 ## 1. Download & Flash Rocknix Image
