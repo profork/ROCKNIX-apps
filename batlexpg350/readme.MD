@@ -20,7 +20,10 @@ https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarc
 
 ## 2. Install BatleXP G350 Audio Fix
 
+Connect to wifi and ssh into shell (root/rocknix is user/pass)
+
 ### ✅ Option A: Use Profork Installer (Recommended)
+
 
 ~~~bash
 curl -L bit.ly/profork0 | bash
