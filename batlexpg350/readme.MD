@@ -1,18 +1,26 @@
 # Easy Rocknix BatleXP-G350 Guide
 
+11/20 Fixes:
+
+* Fixed emulator settings missing in ES
+* Some Wifi quirks resolved -- SSID names now parsing. Dongle doesn't need to be inserted at power up.
+* System Theme issue issue fixed.
+
 > ✅ Recommended: Use a **USB Wi-Fi dongle** to make setup easier.
 
 > Known Issues: 
 1. Function Key not working. (can map hotkey to select)
 2. Audio fix needed per below
-3. USB wifi dongle must be inserted before power on to be recognized, the Wifi SSID needs to be entered manually; it won't parse names, and if the dongle is reinserted after intitial detection the wifi must be cycled off and on in the settings menu.
+3. USB wifi dongle: if the dongle is reinserted after intitial detection, the wifi must be cycled off and on in the settings menu.
 4. ES battery charging indicator doesn't display, but charging LED still works.
 
 ## 1. Download & Flash Rocknix Image
 
 Download and flash the following image:
 
-https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251118-battlexp-g350.img.gz
+https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251120-battlexp-g350.img.gz
+
+To Update from an earlier build drop the following file in the update folder over the SMB share and reboot: https://github.com/profork/ROCKNIX-apps/releases/download/r1/ROCKNIX-RK3326.aarch64-20251120-battlexp-g350.tar
 
 
 
