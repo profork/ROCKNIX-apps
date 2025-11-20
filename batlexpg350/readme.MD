@@ -70,4 +70,7 @@ Nightly Updates are not recommended at this time due to screen panel mismatch is
 
 * NOTE: you can toggle between libmali (default) and panfrost drivers in the system settings menu. 2D apps / file manager / Portmaster Menu needs panfrost mode. 
 
+--
+
+See the Rocknix Wiki for more information: https://rocknix.org/
 
