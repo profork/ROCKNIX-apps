@@ -68,7 +68,6 @@ Nightly Updates are not recommended at this time due to screen panel mismatch is
 
 ✅ **Done!** Your BatleXP-G350 should now boot Rocknix with working audio.
 
-* (Note you can toggle between libmali (default) and panfrost drivers in the system settings menu. Portmaster Menu needs panfrost mode.
-
+* NOTE: you can toggle between libmali (default) and panfrost drivers in the system settings menu. 2D apps / file manager / Portmaster Menu needs panfrost mode. 
 
 
