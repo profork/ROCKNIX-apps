@@ -29,7 +29,7 @@ download() {
     return 0
   fi
   mkdir -p "$(dirname "$out")"
-  wget -q --no-check-certificate --retry-connrefused -O "$out".partial "$url"
+  wget -q --no-check-certificate  -O "$out".partial "$url"
   mv -f "$out".partial "$out"
   log "✔ Saved: $out"
 }
