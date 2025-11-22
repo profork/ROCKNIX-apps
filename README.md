@@ -7,7 +7,7 @@ Some launchers use Arch Runimage or Alpine chroot environments and are gamepad-f
 
 # Installer/Menu via Terminal/SSH
 ```
-curl -L bit.ly/profork0 | bash
+curl -L bit.ly/rockapps | bash
 ```
 
 ## 🖥️ Desktop Mode
