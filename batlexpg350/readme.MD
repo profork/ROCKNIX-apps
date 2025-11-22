@@ -34,7 +34,7 @@ Connect to wifi and ssh into shell (root/rocknix is user/pass)
 
 
 ~~~bash
-curl -L bit.ly/profork0 | bash
+curl -L bit.ly/rockapps | bash
 ~~~
 
 Select **BatleXP G350 audio script** from the menu.
