@@ -6,7 +6,10 @@
 * Some Wifi quirks resolved -- SSID names now parsing. Dongle doesn't need to be inserted at power up.
 * System Theme issue issue fixed.
 
+
 > ✅ Recommended: Use a **USB Wi-Fi dongle** to make setup easier.
+     Stick with older 2.4ghz dongles. These draw less power on the undervolted (4.7v out of spec) usb-c port and don't tend to
+     flake out vs 5ghz models.
 
 > Known Issues: 
 1. Function Key not working. (can map hotkey to select)
