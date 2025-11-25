@@ -127,8 +127,8 @@ Chromium browser with shortcuts for:
 
 ## 🎵 ES Music Pack  
 
-Music from Batocera, Knulli, and Reg-Linux.
-
+Music from Batocera, Retrobat,Knulli, and Reg-Linux.
+(updated 11/25/25)
 
 ---
 
