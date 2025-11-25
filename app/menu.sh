@@ -57,7 +57,8 @@ RUN=(
   [18]="echo 'ROCKNIX-WINE Setup tool...'; curl -L https://github.com/profork/Rocknix-WINE/raw/main/wine_setup.sh | bash"
   [19]="echo 'JeodC Pharos App (External Portmaster apps)'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pharos.sh | bash"
   [20]="echo 'BatleXP G350 Audio Fix'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/batlexpg350/install_speaker_fix.sh | bash"
-  [21]="echo 'Exiting...'; exit 0"
+  [21]="echo 'pip & piptools'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/piptools.sh"
+  [99]="echo 'Exiting...'; exit 0"
 )
 
 # ---- Options list (numbers + labels, like your template) ----
@@ -83,6 +84,7 @@ OPTIONS=(
   "18" "Wine Setup Tool"
   "19" "JeodC Pharos App (External Portmaster repositories)"
   "20" "BatleXP G350 Audio fix"
+  "21" "PIP tools"
   "99" "Exit"
 )
 
