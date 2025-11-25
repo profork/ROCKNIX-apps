@@ -57,7 +57,7 @@ RUN=(
   [18]="echo 'ROCKNIX-WINE Setup tool...'; curl -L https://github.com/profork/Rocknix-WINE/raw/main/wine_setup.sh | bash"
   [19]="echo 'JeodC Pharos App (External Portmaster apps)'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/pharos.sh | bash"
   [20]="echo 'BatleXP G350 Audio Fix'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/batlexpg350/install_speaker_fix.sh | bash"
-  [21]="echo 'pip & piptools'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/piptools.sh"
+  [21]="echo 'pip & piptools'; curl -L https://github.com/profork/ROCKNIX-apps/raw/main/piptools.sh | bash"
   [99]="echo 'Exiting...'; exit 0"
 )
 
