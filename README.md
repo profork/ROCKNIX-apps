@@ -153,7 +153,14 @@ Useful commands:
 ```bash
 soar list 'pkgcache' | more   # Apps/Packages
 soar list 'bincache' | more   # CLI Tools
+
 ```
+
+---
+
+## 📦  PIP and PIP tools
+
+<img width="717" height="489" alt="image" src="https://github.com/user-attachments/assets/2f8d3e6e-1aea-4063-9e5f-abe22f3adabf" />
 
 ---
 
