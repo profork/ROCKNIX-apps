@@ -19,7 +19,7 @@ cd "$TMP_DIR" || exit 1
 
 # Download with wget (shows progress, saves as $ZIP_NAME)
 echo "Downloading Carbon theme... Approx 150MB"
-wget -q --show-progress -O "$ZIP_NAME" "$ZIP_URL"
+wget -q  -O "$ZIP_NAME" "$ZIP_URL"
 
 # Extract to a throwaway folder
 echo "Extracting theme..."
