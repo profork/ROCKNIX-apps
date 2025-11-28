@@ -4,7 +4,7 @@ set -euo pipefail
 # Variables
 THEME_DIR="/storage/.config/emulationstation/themes"
 TARGET_DIR="${THEME_DIR}/es-theme-carbon"
-ZIP_URL="https://github.com/profork/profork/releases/download/r1/es-theme-carbon.zip"
+ZIP_URL="https://github.com/profork/ROCKNIX-apps/releases/download/r1/batocera-rom-pack.zip"
 ZIP_NAME="es-theme-carbon.zip"
 TMP_DIR="/tmp"
 EXTRACT_DIR="${TMP_DIR}/es-theme-carbon-extract"
