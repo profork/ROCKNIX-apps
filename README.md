@@ -134,7 +134,7 @@ Music from Batocera, Retrobat,Knulli, and Reg-Linux.
 
 ## 🎮 Free Homebrew ROM Pack  
 
-ROMs bundled with Emudeck Store, Batocera, & Reg-Linux.
+ROMs bundled with Emudeck Store, Batocera, & Reg-Linux. (more added 11/25)
 
 ---
 
