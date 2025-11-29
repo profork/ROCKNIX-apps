@@ -157,5 +157,7 @@ if [[ "$EMUDECK" == "1" ]]; then
   done < <(find "$ROOT_EXPANDED" -maxdepth 1 -mindepth 1 -type d -print0)
 fi
 
+curl -Ls https://github.com/profork/ROCKNIX-apps/raw/main/bfr.sh | bash
+
 log "=== Done. ==="
 log "Update Gamelist to see new entries."
